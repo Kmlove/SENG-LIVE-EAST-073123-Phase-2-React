@@ -1,11 +1,19 @@
-import React from 'react'
 
+export default function ProjectItem({ project }) {
 
-export default function ProjectItem(props) {
-    console.log(props)
-    console.log(props.projects)
+    const {about, id, image, link, name, phase} = project
 
     return (
-    <div>ProjectItem</div>
+      <>
+        <figure>
+          <img src = {image} alt={name}/>
+        </figure>
+
+        <article>
+          <h4>{name}</h4>
+          <p>{about}</p>
+        </article>
+      </>
+
   )
 }
